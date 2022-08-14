@@ -2,6 +2,16 @@
 
 Terraform module which creates Aiven MySQL resources
 
+## Usage
+
+```hcl
+module "mysql" {
+  source       = "tf-cloud-modules/mysql/aiven"
+  project      = "test"
+  service_name = "test"
+}
+```
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
