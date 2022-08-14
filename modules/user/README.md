@@ -6,7 +6,7 @@ Terraform module which creates Aiven MySQL User resources
 
 ```hcl
 module "pg_user" {
-  source        = "tf-cloud-modules/mysql/aiven//modules/pg_user"
+  source        = "tf-cloud-modules/mysql/aiven//modules/user"
   project       = "test"
   service_name  = "test"
   username      = "test"
