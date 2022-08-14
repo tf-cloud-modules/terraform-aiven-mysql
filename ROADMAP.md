@@ -13,6 +13,6 @@ This document describes the current status of this project.
 | ✔ | [Add mysql_user_config.privatelink_access]() ||
 | ✔ | [Add mysql_user_config.public_access]() ||
 | ❌ | [Add service_integrations]() |`in progress`|
-| ❌ | [Add database module]() |`in progress`|
-| ❌ | [Add user module]() |`in progress`|
-| ❌ | [Add examples]() |`in progress`|
+| ✔ | [Add database module]() ||
+| ✔ | [Add user module]() ||
+| ✔ | [Add examples]() ||
