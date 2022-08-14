@@ -10,6 +10,15 @@ resource "aiven_mysql" "this" {
   service_name            = var.service_name
   termination_protection  = var.termination_protection
 
+  mysql_user_config {
+    binlog_retention_period = var.binlog_retention_period
+    ip_filter               = var.ip_filter
+    mysql_version           = var.mysql_version
+    project_to_fork_from    = var.project_to_fork_from
+    recovery_target_time    = var.recovery_target_time
+    service_to_fork_from    = var.service_to_fork_from
+  }
+
   dynamic "tag" {
     for_each = var.tags
     content {

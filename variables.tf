@@ -61,3 +61,39 @@ variable "termination_protection" {
   type        = bool
   default     = false
 }
+
+variable "binlog_retention_period" {
+  description = "The minimum amount of time in seconds to keep binlog entries before deletion."
+  type        = string
+  default     = ""
+}
+
+variable "ip_filter" {
+  description = "IP filter."
+  type        = list(string)
+  default     = ["0.0.0.0/0"]
+}
+
+variable "mysql_version" {
+  description = "MySQL major version."
+  type        = string
+  default     = "8"
+}
+
+variable "project_to_fork_from" {
+  description = "Name of another project to fork a service from."
+  type        = string
+  default     = ""
+}
+
+variable "recovery_target_time" {
+  description = "Recovery target time when forking a service."
+  type        = string
+  default     = ""
+}
+
+variable "service_to_fork_from" {
+  description = "Name of another service to fork from."
+  type        = string
+  default     = ""
+}
