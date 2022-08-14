@@ -7,7 +7,7 @@ This document describes the current status of this project.
 | :---: | :--- | --- | 
 | ✔ | [Set up basic module features]() || 
 | ✔ | [Add mysql_user_config]() ||
-| ❌ | [Add mysql_user_config.migration]() |`in progress`|
+| ✔ | [Add mysql_user_config.migration]() ||
 | ❌ | [Add mysql_user_config.mysql]() |`in progress`|
 | ❌ | [Add mysql_user_config.private_access]() |`in progress`|
 | ❌ | [Add mysql_user_config.privatelink_access]() |`in progress`|

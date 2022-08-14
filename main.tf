@@ -17,6 +17,17 @@ resource "aiven_mysql" "this" {
     project_to_fork_from    = var.project_to_fork_from
     recovery_target_time    = var.recovery_target_time
     service_to_fork_from    = var.service_to_fork_from
+
+    migration {
+      dbname     = var.migration_dbname
+      host       = var.migration_host
+      ignore_dbs = var.migration_ignore_dbs
+      method     = var.migration_method
+      password   = var.migration_password
+      port       = var.migration_port
+      ssl        = var.migration_ssl
+      username   = var.migration_username
+    }
   }
 
   dynamic "tag" {
