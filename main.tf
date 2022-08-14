@@ -28,6 +28,24 @@ resource "aiven_mysql" "this" {
       ssl        = var.migration_ssl
       username   = var.migration_username
     }
+
+    public_access {
+      prometheus = var.public_access_prometheus
+      mysql      = var.public_access_mysql
+      mysqlx     = var.public_access_mysqlx
+    }
+
+    private_access {
+      prometheus = var.private_access_prometheus
+      mysql      = var.private_access_mysql
+      mysqlx     = var.private_access_mysqlx
+    }
+
+    privatelink_access {
+      prometheus = var.privatelink_prometheus
+      mysql      = var.privatelink_mysql
+      mysqlx     = var.privatelink_mysqlx
+    }
   }
 
   dynamic "tag" {

@@ -146,3 +146,57 @@ variable "migration_username" {
   type        = string
   default     = ""
 }
+
+variable "public_access_prometheus" {
+  description = "Allow clients to connect to prometheus from the public internet for service nodes that are in a project VPC or another type of private network."
+  type        = bool
+  default     = false
+}
+
+variable "public_access_mysql" {
+  description = "Allow clients to connect to mysql from the public internet for service nodes that are in a project VPC or another type of private network."
+  type        = bool
+  default     = false
+}
+
+variable "public_access_mysqlx" {
+  description = "Allow clients to connect to mysqlx from the public internet for service nodes that are in a project VPC or another type of private network."
+  type        = bool
+  default     = false
+}
+
+variable "private_access_prometheus" {
+  description = "Allow clients to connect to prometheus with a DNS name that always resolves to the service's private IP addresses."
+  type        = bool
+  default     = false
+}
+
+variable "private_access_mysql" {
+  description = "Allow clients to connect to mysql with a DNS name that always resolves to the service's private IP addresses. Only available in certain network locations."
+  type        = bool
+  default     = false
+}
+
+variable "private_access_mysqlx" {
+  description = "Allow clients to connect to mysqlx with a DNS name that always resolves to the service's private IP addresses. Only available in certain network locations."
+  type        = bool
+  default     = false
+}
+
+variable "privatelink_prometheus" {
+  description = "Enable prometheus."
+  type        = bool
+  default     = false
+}
+
+variable "privatelink_mysql" {
+  description = "Enable mysql."
+  type        = bool
+  default     = false
+}
+
+variable "privatelink_mysqlx" {
+  description = "Enable mysqlx."
+  type        = bool
+  default     = false
+}
