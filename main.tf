@@ -84,8 +84,8 @@ resource "aiven_mysql" "this" {
   dynamic "tag" {
     for_each = var.tags
     content {
-      key   = lookup(service_integrations.value, "key", null)
-      value = lookup(service_integrations.value, "value", null)
+      key   = lookup(tag.value, "key", null)
+      value = lookup(tag.value, "value", null)
     }
   }
 

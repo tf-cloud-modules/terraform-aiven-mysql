@@ -2,6 +2,12 @@ module "mysql" {
   source       = "../.."
   project      = var.project
   service_name = var.service_name
+  tags = [
+    {
+      key   = "env"
+      value = "test"
+    }
+  ]
 }
 
 module "database" {
