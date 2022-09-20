@@ -380,3 +380,9 @@ variable "wait_timeout" {
   type        = string
   default     = ""
 }
+
+variable "service_integrations" {
+  description = "Service integrations to specify when creating a service."
+  type        = list(any)
+  default     = []
+}

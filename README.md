@@ -93,6 +93,7 @@ No modules.
 | <a name="input_public_access_mysqlx"></a> [public\_access\_mysqlx](#input\_public\_access\_mysqlx) | Allow clients to connect to mysqlx from the public internet for service nodes that are in a project VPC or another type of private network. | `bool` | `false` | no |
 | <a name="input_public_access_prometheus"></a> [public\_access\_prometheus](#input\_public\_access\_prometheus) | Allow clients to connect to prometheus from the public internet for service nodes that are in a project VPC or another type of private network. | `bool` | `false` | no |
 | <a name="input_recovery_target_time"></a> [recovery\_target\_time](#input\_recovery\_target\_time) | Recovery target time when forking a service. | `string` | `""` | no |
+| <a name="input_service_integrations"></a> [service\_integrations](#input\_service\_integrations) | Service integrations to specify when creating a service. | `list(any)` | `[]` | no |
 | <a name="input_service_name"></a> [service\_name](#input\_service\_name) | Specifies the actual name of the service. | `string` | n/a | yes |
 | <a name="input_service_to_fork_from"></a> [service\_to\_fork\_from](#input\_service\_to\_fork\_from) | Name of another service to fork from. | `string` | `""` | no |
 | <a name="input_slow_query_log"></a> [slow\_query\_log](#input\_slow\_query\_log) | slow\_query\_log | `string` | `""` | no |
