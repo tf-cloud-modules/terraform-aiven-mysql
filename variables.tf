@@ -64,14 +64,8 @@ variable "termination_protection" {
 
 variable "binlog_retention_period" {
   description = "The minimum amount of time in seconds to keep binlog entries before deletion."
-  type        = string
-  default     = ""
-}
-
-variable "ip_filter" {
-  description = "IP filter."
-  type        = list(string)
-  default     = ["0.0.0.0/0"]
+  type        = number
+  default     = null
 }
 
 variable "mysql_version" {
@@ -94,55 +88,6 @@ variable "recovery_target_time" {
 
 variable "service_to_fork_from" {
   description = "Name of another service to fork from."
-  type        = string
-  default     = ""
-}
-
-variable "migration_dbname" {
-  description = "Database name for bootstrapping the initial connection."
-  type        = string
-  default     = ""
-}
-
-variable "migration_host" {
-  description = "Hostname or IP address of the server where to migrate data from."
-  type        = string
-  default     = ""
-}
-
-variable "migration_ignore_dbs" {
-  description = "Comma-separated list of databases, which should be ignored during migration."
-  type        = string
-  default     = ""
-}
-
-variable "migration_method" {
-  description = "The migration method to be used."
-  type        = string
-  default     = ""
-}
-
-variable "migration_password" {
-  description = "Password for authentication with the server where to migrate data from."
-  sensitive   = true
-  type        = string
-  default     = ""
-}
-
-variable "migration_port" {
-  description = "Port number of the server where to migrate data from."
-  type        = string
-  default     = ""
-}
-
-variable "migration_ssl" {
-  description = "The server where to migrate data from is secured with SSL."
-  type        = string
-  default     = ""
-}
-
-variable "migration_username" {
-  description = "User name for authentication with the server where to migrate data."
   type        = string
   default     = ""
 }
@@ -203,8 +148,8 @@ variable "privatelink_mysqlx" {
 
 variable "connect_timeout" {
   description = "connect_timeout"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "default_time_zone" {
@@ -215,32 +160,32 @@ variable "default_time_zone" {
 
 variable "group_concat_max_len" {
   description = "group_concat_max_len"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "information_schema_stats_expiry" {
   description = "information_schema_stats_expiry"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "innodb_change_buffer_max_size" {
   description = "innodb_change_buffer_max_size"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "innodb_flush_neighbors" {
   description = "innodb_flush_neighbors"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "innodb_ft_min_token_size" {
   description = "innodb_ft_min_token_size"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "innodb_ft_server_stopword_table" {
@@ -252,55 +197,55 @@ variable "innodb_ft_server_stopword_table" {
 variable "innodb_lock_wait_timeout" {
   description = "innodb_lock_wait_timeout"
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "innodb_log_buffer_size" {
   description = "innodb_log_buffer_size"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "innodb_online_alter_log_max_size" {
   description = "innodb_online_alter_log_max_size"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "innodb_print_all_deadlocks" {
   description = "innodb_print_all_deadlocks"
-  type        = string
-  default     = ""
+  type        = bool
+  default     = null
 }
 
 variable "innodb_read_io_threads" {
   description = "innodb_read_io_threads"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "innodb_rollback_on_timeout" {
   description = "innodb_rollback_on_timeout"
-  type        = string
-  default     = ""
+  type        = bool
+  default     = null
 }
 
 variable "innodb_thread_concurrency" {
   description = "innodb_thread_concurrency"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "innodb_write_io_threads" {
   description = "innodb_write_io_threads"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "interactive_timeout" {
   description = "interactive_timeout"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "internal_tmp_mem_storage_engine" {
@@ -311,50 +256,50 @@ variable "internal_tmp_mem_storage_engine" {
 
 variable "long_query_time" {
   description = "long_query_time"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "max_allowed_packet" {
   description = "max_allowed_packet"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "max_heap_table_size" {
   description = "max_heap_table_size"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "net_buffer_length" {
   description = "net_buffer_length"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "net_read_timeout" {
   description = "net_read_timeout"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "net_write_timeout" {
   description = "net_write_timeout"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "slow_query_log" {
   description = "slow_query_log"
-  type        = string
-  default     = ""
+  type        = bool
+  default     = null
 }
 
 variable "sort_buffer_size" {
   description = "sort_buffer_size"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "sql_mode" {
@@ -365,24 +310,40 @@ variable "sql_mode" {
 
 variable "sql_require_primary_key" {
   description = "sql_require_primary_key"
-  type        = string
-  default     = ""
+  type        = bool
+  default     = null
 }
 
 variable "tmp_table_size" {
   description = "tmp_table_size"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "wait_timeout" {
   description = "wait_timeout"
-  type        = string
-  default     = ""
+  type        = number
+  default     = null
 }
 
 variable "service_integrations" {
   description = "Service integrations to specify when creating a service."
   type        = list(any)
   default     = []
+}
+
+variable "migration" {
+  description = "Migrate data from existing server."
+  type        = list(any)
+  default     = []
+}
+
+variable "ip_filter_object" {
+  description = "Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'."
+  type        = list(any)
+  default     = [
+    {
+      network ="0.0.0.0/0"
+    }
+  ]
 }
