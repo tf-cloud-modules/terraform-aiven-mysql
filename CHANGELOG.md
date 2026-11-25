@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fix `mysql_user_config` migration lifecycle `ignore_changes` path for provider v4 syntax (`mysql_user_config[0].migration[0]`).
 - Omit unset optional string settings instead of passing empty strings rejected by provider validation.
+- Change the default MySQL version from 8.0 (EOL) to the supported 8.4 release for new services.
 
 ## [2.0.0] - 2023-03-28
 

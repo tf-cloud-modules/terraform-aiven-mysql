@@ -102,7 +102,7 @@ No modules.
 | <a name="input_max_user_connections"></a> [max\_user\_connections](#input\_max\_user\_connections) | The maximum number of simultaneous connections permitted to any single user account. 0 means no per-account limit. | `number` | `null` | no |
 | <a name="input_migration"></a> [migration](#input\_migration) | Migrate data from existing server. | `list(any)` | `[]` | no |
 | <a name="input_mysql_incremental_backup"></a> [mysql\_incremental\_backup](#input\_mysql\_incremental\_backup) | MySQL incremental backup configuration. | `list(any)` | `[]` | no |
-| <a name="input_mysql_version"></a> [mysql\_version](#input\_mysql\_version) | MySQL major version. | `string` | `"8"` | no |
+| <a name="input_mysql_version"></a> [mysql\_version](#input\_mysql\_version) | MySQL service version. | `string` | `"8.4"` | no |
 | <a name="input_net_buffer_length"></a> [net\_buffer\_length](#input\_net\_buffer\_length) | net\_buffer\_length | `number` | `null` | no |
 | <a name="input_net_read_timeout"></a> [net\_read\_timeout](#input\_net\_read\_timeout) | net\_read\_timeout | `number` | `null` | no |
 | <a name="input_net_write_timeout"></a> [net\_write\_timeout](#input\_net\_write\_timeout) | net\_write\_timeout | `number` | `null` | no |

@@ -87,9 +87,9 @@ variable "service_log" {
 }
 
 variable "mysql_version" {
-  description = "MySQL major version."
+  description = "MySQL service version."
   type        = string
-  default     = "8"
+  default     = "8.4"
 }
 
 variable "project_to_fork_from" {
