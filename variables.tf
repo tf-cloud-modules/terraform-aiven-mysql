@@ -95,19 +95,19 @@ variable "mysql_version" {
 variable "project_to_fork_from" {
   description = "Name of another project to fork a service from."
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "recovery_target_time" {
   description = "Recovery target time when forking a service."
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "service_to_fork_from" {
   description = "Name of another service to fork from."
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "mysql_incremental_backup" {
@@ -179,7 +179,7 @@ variable "automatic_sp_privileges" {
 variable "collation_server" {
   description = "The default collation for databases created without one, which their new tables then inherit. Only collations of the utf8mb4 character set are accepted."
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "connect_timeout" {
@@ -191,7 +191,7 @@ variable "connect_timeout" {
 variable "default_time_zone" {
   description = "default_time_zone"
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "div_precision_increment" {
@@ -215,7 +215,7 @@ variable "eq_range_index_dive_limit" {
 variable "event_scheduler" {
   description = "Whether the event scheduler runs the events created with CREATE EVENT. Enum: `OFF`, `ON`."
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "group_concat_max_len" {
@@ -287,7 +287,7 @@ variable "innodb_ft_result_cache_limit" {
 variable "innodb_ft_server_stopword_table" {
   description = "innodb_ft_server_stopword_table"
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "innodb_ft_sort_pll_degree" {
@@ -305,7 +305,7 @@ variable "innodb_ft_total_cache_size" {
 variable "innodb_ft_user_stopword_table" {
   description = "This option is used to specify your own InnoDB FULLTEXT index stopword list for specific InnoDB tables."
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "innodb_io_capacity" {
@@ -413,13 +413,13 @@ variable "interactive_timeout" {
 variable "internal_tmp_mem_storage_engine" {
   description = "internal_tmp_mem_storage_engine"
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "log_output" {
   description = "The slow log output destination when slow_query_log is ON. Enum: `INSIGHTS`, `INSIGHTS,TABLE`, `NONE`, `TABLE`."
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "long_query_time" {
@@ -503,7 +503,7 @@ variable "optimizer_search_depth" {
 variable "optimizer_switch" {
   description = "Comma-separated list of optimizer flag assignments in the form flag=on|off|default, or the single value `default` to reset all flags."
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "performance_schema_events_statements_history_size" {
@@ -539,7 +539,7 @@ variable "sort_buffer_size" {
 variable "sql_mode" {
   description = "sql_mode"
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "sql_require_primary_key" {
