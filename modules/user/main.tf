@@ -4,4 +4,5 @@ resource "aiven_mysql_user" "this" {
   service_name   = var.service_name
   username       = var.username
   authentication = var.authentication
+  mysql_grants   = var.mysql_grants
 }
