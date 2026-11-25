@@ -24,3 +24,9 @@ variable "authentication" {
   type        = string
   default     = "caching_sha2_password"
 }
+
+variable "mysql_grants" {
+  description = "MySQL grants for the service user. Changing this property forces recreation of the resource."
+  type        = list(string)
+  default     = null
+}
